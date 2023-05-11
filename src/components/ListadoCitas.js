@@ -1,24 +1,21 @@
 import React from 'react'
-import Persona from './Persona';
+import Cita from './Cita';
 
-export default function ListadoCitas({listado,categoria}) {
+export default function ListadoCitas({listado}) {
   return (
-    <div className="container-fluid">
-        <div className='row'>
-            <div className='col-12'>
-                <h1>{categoria}</h1>
-            </div>
-        </div>
-        <div className="row">
-          {listado.map((item,index)=>(
-            <div key={index} className="col-3">
-              <Persona 
-                titulo={item.titulo}
-                descripcion={item.descripcion}
+    <div className="one-half column">
+    <h2>Administra tus citas</h2>
+          {listado.map((item)=>(
+            <div className="cita">
+              <Cita          
+                Mascota={item.Mascota}
+                Dueño={item.Dueño}
+                Fecha={item.Fecha}
+                Hora={item.Hora}
+                Sintomas={item.Sintomas}
               />
             </div>          
           ))}
-        </div>
       </div>
   )
 }

@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useState } from "react";
 
-export default function Cita({Mascota,Dueño,Fecha,Hora,Sintomas}) {
+export default function Cita({cita}) {
+  const {mascota,propietario,fecha,hora,sintomas} = cita;
 
   return (
     <div className="cita">
-        <p>Mascota: <span>{Mascota}</span></p>
-        <p>Dueño: <span>{Dueño}</span></p>
-        <p>Fecha: <span>{Fecha}</span></p>
-        <p>Hora: <span>{Hora}</span></p>
-        <p>Sintomas: <span>{Sintomas}</span></p>
+        <p>Mascota: <span>{mascota}</span></p>
+        <p>Dueño: <span>{propietario}</span></p>
+        <p>Fecha: <span>{fecha}</span></p>
+        <p>Hora: <span>{hora}</span></p>
+        <p>Sintomas: <span>{sintomas}</span></p>
         <button className="button elimnar u-full-width">Eliminar × </button>
     </div>
   )

@@ -10,7 +10,7 @@ export default function Cita({cita}) {
         <p>Fecha: <span>{fecha}</span></p>
         <p>Hora: <span>{hora}</span></p>
         <p>Sintomas: <span>{sintomas}</span></p>
-        <button className="button elimnar u-full-width">Eliminar × </button>
+        <button className="button elimnar u-full-width" onClick={EliminarCita}>Eliminar × </button>
     </div>
   )
 } 

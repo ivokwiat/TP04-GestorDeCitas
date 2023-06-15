@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function Formulario({setListado,listado}) {
     const [datos,setDatos] = useState({
+       // id:0;
         mascota:'',
         propietario:'',
         fecha:'',

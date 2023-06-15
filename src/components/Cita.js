@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import ListadoCitas from "./ListadoCitas";
 
-export default function Cita({cita}) {
+
+export default function Cita({cita, onEliminar}) {
+
   const {mascota,propietario,fecha,hora,sintomas} = cita;
 
   return (
@@ -10,7 +13,7 @@ export default function Cita({cita}) {
         <p>Fecha: <span>{fecha}</span></p>
         <p>Hora: <span>{hora}</span></p>
         <p>Sintomas: <span>{sintomas}</span></p>
-        <button className="button elimnar u-full-width" onClick={EliminarCita}>Eliminar × </button>
+        <button className="button elimnar u-full-width" onClick={() => onEliminar(cita.id)}>Eliminar × </button>
     </div>
   )
 } 
